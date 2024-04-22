@@ -52,9 +52,9 @@ Class RouteModel{
                     'location_name' => $locationName
                 );
             }
-
+            $div = "";
             foreach($outputArray as $site => $location){
-                $div  = '<div class="card card-primary card-outline">';
+                $div .= '<div class="card card-primary card-outline">';
                 $div .= '<div class="card-header">';
                 $div .= '<h5 class="card-title m-0"><strong>'.$site.'</strong></h5>';
                 $div .= '</div>';
