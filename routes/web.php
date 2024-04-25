@@ -11,9 +11,9 @@ $route = new MainController();
 
 switch($nowHref){
     case 'vote':
-        $title        = Setting::$title[0];
         $txt          = $route->Vote($location);
 
+        $title        = Setting::$title[1]." ".$txt['SiteCode']." - ".$txt['LocationName'];
         $SiteCode     = $txt['SiteCode'];
         $SiteName     = $txt['SiteName'];
         $LocationCode = $txt['LocationCode'];
@@ -24,7 +24,9 @@ switch($nowHref){
         $title   = Setting::$title[0];
         $txt     = $route->Default();
 
-        $content = $txt;
+        $html     = $txt['Content'];
+        $Site     = $txt['Site'];
+
         $content = dirname(__DIR__ ) . "/app/Views/Home/view.php";
     break;
 }

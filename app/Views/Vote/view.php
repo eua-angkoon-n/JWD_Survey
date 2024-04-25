@@ -7,7 +7,7 @@ require_once __DIR__ . "/component/style.php";
         <div class="container">
             <div class="row mb-2">
                 <div class="col-sm-12 text-center">
-                    <h1 class="m-0"><strong>ประเมินความพึงพอใจ</strong></h1>
+                    <h1 class="m-0" style="font-weight: bold">ประเมินความพึงพอใจ</h1>
                     <h2><small><?php echo $SiteName." ".$LocationName ?></small></h2>
 
                 </div><!-- /.col -->

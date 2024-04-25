@@ -9,7 +9,8 @@ require_once __DIR__ . "/../../tools/crud.tool.php";
 require_once __DIR__ . "/../../tools/function.tool.php";
 
 require_once __DIR__ . "/../Models/TableProcess.php";
-require_once __DIR__ . "/../Models/TableLineUser.php";
+
+require_once __DIR__ . "/../Models/TableReport.php";
 
 $column = $_POST['order']['0']['column'] + 1;
 $search = $_POST["search"]["value"];
@@ -30,19 +31,13 @@ $dataGet = array(
 if (isset($_POST['action'])) {
 
     switch ($_POST['action']) {
-        case 'LineUser':
+        case 'Report':
             $dataGet['dataCol'] = array( 
-                0 => "id",
-                1 => "id",
-                2 => "id",
-                3 => "user_name",
-                4 => "emp_code",
-                5 => "id",
-                6 => "emp_comp",
-                7 => "added_date",
-                8 => "is_delete"
+                0 => "date_survey",
+                1 => "date_survey",
+                2 => "score",
             );
-            $Table = new LineUserTable($_POST['formData'], $dataGet);
+            $Table = new ReportTable($_POST['site'], $_POST['location'], $_POST['startdate'], $_POST['enddate'], $dataGet);
             $data  = $Table->getTable();
             break;
     }

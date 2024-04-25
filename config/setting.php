@@ -4,7 +4,7 @@ class Setting
     public static $AppTimeZone = 'Asia/Bangkok';
     public static $DefaultProvinceTH = 'สมุทรสาคร';
     public static $DefaultProvince = 'Samut Sakhon';
-    public static $title = array("Survey", "Line User", "Group User");
+    public static $title = array("Survey", "ประเมินความพึงพอใจ");
     public static $prefix = "app";
     public static $prefix_site = "site";
     public static $prefix_location = "location";
@@ -56,5 +56,13 @@ class Setting
         '10' => 'October',
         '11' => 'November',
         '12' => 'December'
+    );
+
+    public static $score = array(
+        1 => "ปรับปรุง",
+        2 => "พอใจ",
+        3 => "ปานกลาง",
+        4 => "ดีมาก",
+        5 => "ดีเยี่ยม"
     );
 }

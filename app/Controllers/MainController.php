@@ -1,12 +1,20 @@
 <?php 
 require_once __DIR__ . "/../Models/RouteModel.php";
+require_once __DIR__ . "/../Models/ListModel.php";
 
 Class MainController{
 
     public function Default(){
         $Route     = new RouteModel();
         $default   = $Route->Index();
-        return $default;
+        
+        $List      = new ListModel();
+        $Site      = $List->Site();
+
+        return array(
+            'Content' => $default,
+            'Site'    => $Site,
+        );
     }
 
     public function Vote($location){

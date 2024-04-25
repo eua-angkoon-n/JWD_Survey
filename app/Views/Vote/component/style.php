@@ -5,7 +5,11 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: none;
-    font-family: -apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif
+    font-size:0.85rem;
+      /*font-family: "Noto Sans Thai",sans-serif;*/
+      font-family: 'Sarabun', sans-serif;
+      font-style: normal;
+      font-weight:500;
 }
 
 .demo-container {
@@ -25,7 +29,7 @@
     position: relative;
     width: 100%;
     max-width: 400px;
-    height: 300px;
+    /* height: 300px; */
     padding: 20px;
     text-align: center;
     margin: 0 auto;
